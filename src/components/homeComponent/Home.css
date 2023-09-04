@@ -1,0 +1,59 @@
+.main__container {
+  height: 100vh;
+  background-color: #61dcfb;
+}
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #363d47;
+  width: 60%;
+  height: 80%;
+  overflow-y: scroll;
+}
+.main::-webkit-scrollbar {
+  width: 13px;
+}
+.main::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(66, 66, 66);
+  border-radius: 10px;
+}
+
+.user__greetings_section {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.user__greetings {
+  padding: 10px;
+}
+.user_heading {
+  font-family: "Montserrat";
+  color: whitesmoke;
+  letter-spacing: 0.7px;
+}
+.user__greetings p {
+  margin-top: 5px;
+  color: whitesmoke;
+  font-size: 16px;
+  letter-spacing: 0.7px;
+}
+.name__reset {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  color: white;
+  outline: none;
+  border: none;
+  border: 1.4px solid red;
+  padding: 10px;
+  cursor: pointer;
+}
+.name__reset:hover {
+  background-color: rebeccapurple;
+  transition-duration: 0.7s;
+  border-radius: 8px;
+  border: 1px solid whitesmoke;
+}
