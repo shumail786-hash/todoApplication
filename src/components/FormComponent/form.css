@@ -49,3 +49,30 @@
   font-size: 15px;
   font-family: calibri;
 }
+
+/* Mobile Responsive for 600px and below */
+@media screen and (max-width: 600px) {
+  .form {
+    width: 75%;
+  }
+  .form h1 {
+    font-size: 25px;
+  }
+  .form input {
+    height: 33%;
+  }
+  .form input::placeholder {
+    font-size: 12px;
+  }
+  .form button {
+    padding: 7px;
+    font-size: 12px;
+    font-family: calibri;
+  }
+  .user__note {
+    font-size: 17px;
+  }
+  .user__note_para {
+    font-size: 13px;
+  }
+}
