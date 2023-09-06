@@ -1,0 +1,5 @@
+.app__container_background {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../../assets/bg.jpg");
+}

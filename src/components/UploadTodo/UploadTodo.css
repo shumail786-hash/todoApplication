@@ -1,0 +1,203 @@
+form {
+  position: relative;
+  top: 20%;
+  margin: auto;
+  width: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+.app__content {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
+  overflow-x: hidden;
+}
+.app__content h1 {
+  margin-left: 10px;
+  white-space: nowrap;
+  text-align: center;
+  color: yellow;
+  overflow: hidden;
+  font-size: 3rem;
+  animation: animate 2s linear alternate;
+  border-bottom: 1px solid white;
+  font-style: italic;
+}
+
+@keyframes animate {
+  0% {
+    width: 0ch;
+    color: greenyellow;
+    border-bottom: 2px solid greenyellow;
+  }
+
+  50% {
+    color: teal;
+    border-bottom: 2px solid teal;
+  }
+
+  75% {
+    color: brown;
+    border-bottom: 2px solid brown;
+  }
+
+  100% {
+    width: 27.5ch;
+    color: rgb(218, 218, 12);
+    border-bottom: 2px solid yellow;
+  }
+}
+
+.app__input {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 44px;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  border-radius: 5px;
+}
+.app__input input {
+  color: whitesmoke;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
+  width: 90%;
+  height: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+}
+.app__input input::placeholder {
+  color: black;
+  letter-spacing: 1.1px;
+  font-size: 15px;
+}
+
+.app__input button {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  height: 100%;
+  width: 13%;
+  padding: 10px;
+  outline: none;
+  border: 0.1px solid grey;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
+  border-radius: 5px;
+  color: greenyellow;
+}
+.app__input button:hover {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+/* Responsive for the screens of 1024 and below */
+@media screen and (max-width: 1024px) {
+  form {
+    width: 70%;
+  }
+  .app__content h1 {
+    font-size: 2rem;
+  }
+  .app__input {
+    height: 34px;
+  }
+  .app__input input {
+    width: 88%;
+  }
+  .app__input button {
+    width: 12%;
+    padding: 3px;
+    font-size: 14px;
+  }
+}
+
+/* Todo List section start */
+
+.app__get_container {
+  position: relative;
+  top: 20%;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  width: 50%;
+  height: 40%;
+  border-radius: 6px;
+}
+.app__lists {
+  height: 80%;
+  width: 80%;
+  margin: auto;
+  overflow: scroll;
+}
+.app__lists::-webkit-scrollbar {
+  width: 2px;
+}
+.app__lists_ul {
+  width: 100%;
+}
+.app__lists_li_btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.app__lists_li {
+  margin-top: 10px;
+  letter-spacing: 0.8px;
+  width: 100%;
+  padding: 7px;
+  border-bottom: 1px solid grey;
+  border-radius: 7px;
+  color: rgb(231, 229, 229);
+  font-size: large;
+  font-weight: lighter;
+  cursor: pointer;
+}
+.app__lists_li_del {
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.app__list_empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.app__list_empty h1 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #e5989b;
+  font-size: 28px;
+  border-bottom: 1px solid;
+}
+.app__options {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.app__options_index {
+  color: rgb(255, 162, 108);
+}
+.app__options_status {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+.app__options_tasks_status {
+  color: aquamarine;
+}
+.app__options_status li {
+  margin-left: 8px;
+}
+
+@media screen and (max-width: 1024px) {
+  .app__get_container {
+    width: 70%;
+  }
+}

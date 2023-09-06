@@ -1,18 +1,16 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./components/homeComponent/Home";
-import Form from "./components/FormComponent/Form";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Home from "./components/Home/Home";
 const App = () => {
   return (
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Form />} />
-          <Route path="/main" element={<Home />} />
+          <Route path="/" element={<Home />} />
           {/* Not found Route */}
-          <Route path="*" element={<Form />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </BrowserRouter>
       <ToastContainer autoClose={1200}></ToastContainer>
