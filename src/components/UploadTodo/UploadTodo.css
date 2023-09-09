@@ -3,48 +3,35 @@ form {
   top: 20%;
   margin: auto;
   width: 50%;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
+  background-color: #393f49;
+  box-shadow: 0px 10px 10px 0px #393f49;
 }
 .app__content {
-  background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(3px);
   overflow-x: hidden;
 }
-.app__content h1 {
-  margin-left: 10px;
-  white-space: nowrap;
-  text-align: center;
-  color: yellow;
-  overflow: hidden;
-  font-size: 3rem;
-  animation: animate 2s linear alternate;
-  border-bottom: 1px solid white;
-  font-style: italic;
+.app__content_system_time {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
 }
-
-@keyframes animate {
-  0% {
-    width: 0ch;
-    color: greenyellow;
-    border-bottom: 2px solid greenyellow;
-  }
-
-  50% {
-    color: teal;
-    border-bottom: 2px solid teal;
-  }
-
-  75% {
-    color: brown;
-    border-bottom: 2px solid brown;
-  }
-
-  100% {
-    width: 27.5ch;
-    color: rgb(218, 218, 12);
-    border-bottom: 2px solid yellow;
-  }
+.app__content p {
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: "Inter", sans-serif;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.app__content li {
+  color: #61dbfb;
+  list-style: none;
+  padding-left: 10px;
+  padding-top: 8px;
+  font-size: 12px;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 1.3px;
+}
+.app__content_time {
+  padding-right: 10px;
 }
 
 .app__input {
@@ -53,14 +40,10 @@ form {
   align-items: center;
   width: 100%;
   height: 44px;
-  border-bottom: 1px solid white;
-  border-left: 1px solid white;
-  border-radius: 5px;
 }
 .app__input input {
-  color: whitesmoke;
-  background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(3px);
+  color: black;
+  font-size: 16px;
   width: 90%;
   height: 100%;
   padding: 10px;
@@ -84,8 +67,7 @@ form {
   border: 0.1px solid grey;
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(3px);
-  border-radius: 5px;
-  color: greenyellow;
+  color: white;
 }
 .app__input button:hover {
   background-color: rgba(255, 255, 255, 0);
@@ -118,11 +100,10 @@ form {
   position: relative;
   top: 20%;
   margin: auto;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
+  background-color: #393f49;
   width: 50%;
-  height: 40%;
-  border-radius: 6px;
+  height: 50%;
+  box-shadow: 0px 10px 10px 0px #393f49;
 }
 .app__lists {
   height: 80%;
@@ -149,18 +130,39 @@ form {
   padding: 7px;
   border-bottom: 1px solid grey;
   border-radius: 7px;
-  color: rgb(231, 229, 229);
+  color: #61dbfb;
   font-size: large;
   font-weight: lighter;
   cursor: pointer;
 }
+.inputLi {
+  outline: none;
+  border: 1px solid white;
+  cursor: auto;
+  background: transparent;
+  width: 85%;
+}
 .disabledLi {
   pointer-events: none;
+}
+.app__lists_li_save {
+  margin-top: 8px;
+  background-color: green !important;
+  color: white;
 }
 .app__status_completed {
   font-size: 12px;
 }
+.app__lists_li_edit {
+  border: none;
+  outline: none;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
 .app__lists_li_del {
+  margin-left: 10px;
   padding: 10px;
   border: none;
   outline: none;
@@ -186,21 +188,23 @@ form {
   justify-content: space-around;
   align-items: center;
 }
-.app__options_index {
-  color: rgb(255, 162, 108);
-}
-.app__options_status {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  list-style-type: none;
-}
+
 .app__options_tasks_status {
+  margin: auto;
+  width: 25%;
+  list-style: none;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 8px;
+  border-radius: 5px;
   color: aquamarine;
+  cursor: pointer;
+}
+.app__options_tasks_status:hover {
+  background-color: rgba(255, 255, 255, 0.119);
 }
 .app__options_status li {
   margin-left: 8px;
-  cursor: pointer;
 }
 
 @media screen and (max-width: 1024px) {
