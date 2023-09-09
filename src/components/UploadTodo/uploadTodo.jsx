@@ -17,7 +17,6 @@ const UploadTodo = () => {
 
   // checking length of incomplete tasks
   const [length, setLength] = useState(Number);
-  const [currentDay, setCurrentDay] = useState("");
   const submitValueToLocalStorage = (e) => {
     e.preventDefault();
     if (inputValue === "") {
@@ -52,7 +51,7 @@ const UploadTodo = () => {
     }
 
     checkLengthHandler();
-  }, [submitTodo]);
+  }, [submitTodo, statusOfTodo]);
   // console.log(sortTodo, "I'm after");
   //   console.log(submitTodo);
 
