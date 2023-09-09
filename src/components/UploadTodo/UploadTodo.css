@@ -154,6 +154,12 @@ form {
   font-weight: lighter;
   cursor: pointer;
 }
+.disabledLi {
+  pointer-events: none;
+}
+.app__status_completed {
+  font-size: 12px;
+}
 .app__lists_li_del {
   padding: 10px;
   border: none;
