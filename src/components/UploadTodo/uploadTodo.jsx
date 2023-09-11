@@ -70,7 +70,8 @@ const UploadTodo = () => {
     const getDataFromLocalStorage = JSON.parse(localStorage.getItem("todo"));
     if (getDataFromLocalStorage) {
       const arrayOfData = Object.values(getDataFromLocalStorage);
-      arrayOfData.sort((a, b) => b.id - a.id);
+      // I didn't sort it.
+      // arrayOfData.sort((a, b) => b.id - a.id);
       setSortTodo(arrayOfData);
     }
 
@@ -216,7 +217,7 @@ const UploadTodo = () => {
                           placeholder="Edit"
                           value={editedText}
                           onChange={(e) => setEditedText(e.target.value)}
-                          className="app__lists_li inputLi"
+                          className="app__lists_li"
                         />
                         <button
                           className="app__lists_li_edit app__lists_li_save"
@@ -246,12 +247,16 @@ const UploadTodo = () => {
                             <></>
                           )}
                         </li>
-                        <button
-                          className="app__lists_li_edit"
-                          onClick={() => editTogglerMode(element.id)}
-                        >
-                          Update
-                        </button>
+                        {element.statusOfTodo === true ? (
+                          <></>
+                        ) : (
+                          <button
+                            className="app__lists_li_edit"
+                            onClick={() => editTogglerMode(element.id)}
+                          >
+                            Update
+                          </button>
+                        )}
                         <button
                           className="app__lists_li_del"
                           onClick={() => handleRemoveList(element.id)}
@@ -265,7 +270,7 @@ const UploadTodo = () => {
               </>
             ) : (
               <div className="app__list_empty">
-                <h1>🥸 No Tasks Found 🤪</h1>
+                <h1>No Tasks Found </h1>
               </div>
             )}
           </ul>

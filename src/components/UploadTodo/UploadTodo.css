@@ -2,7 +2,7 @@ form {
   position: relative;
   top: 20%;
   margin: auto;
-  width: 50%;
+  width: 60%;
   background-color: #393f49;
   box-shadow: 0px 10px 10px 0px #393f49;
 }
@@ -14,13 +14,14 @@ form {
   justify-content: space-between;
   padding: 5px;
 }
-.app__content p {
+.app__content_day_date p {
   color: #fff;
   font-size: 1.2rem;
   font-family: "Inter", sans-serif;
   padding-left: 10px;
   padding-top: 10px;
 }
+
 .app__content li {
   color: #61dbfb;
   list-style: none;
@@ -33,7 +34,13 @@ form {
 .app__content_time {
   padding-right: 10px;
 }
-
+.app__content_time p {
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: "Inter", sans-serif;
+  padding-left: 10px;
+  padding-top: 10px;
+}
 .app__input {
   margin-top: 10px;
   display: flex;
@@ -73,24 +80,52 @@ form {
   background-color: rgba(255, 255, 255, 0);
 }
 
-/* Responsive for the screens of 1024 and below */
+/* Responsive for the screens of 700 and below */
 @media screen and (max-width: 1024px) {
   form {
-    width: 70%;
+    width: 80%;
   }
-  .app__content h1 {
-    font-size: 2rem;
+  .app__content_day_date p {
+    font-size: 16px;
+  }
+  .app__content_day_date li {
+    font-size: 11px;
+    letter-spacing: 0.8px;
+  }
+  .app__content_time p {
+    font-size: 16px;
+  }
+  .app__content_time li {
+    font-size: 11px;
+    letter-spacing: 0.8px;
   }
   .app__input {
     height: 34px;
   }
   .app__input input {
-    width: 88%;
+    width: 84%;
   }
   .app__input button {
-    width: 12%;
+    width: 16%;
     padding: 3px;
     font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .app__content_day_date p {
+    font-size: 13px;
+  }
+  .app__content_day_date li {
+    font-size: 10.5px;
+    letter-spacing: 0.3px;
+  }
+  .app__content_time p {
+    font-size: 13px;
+  }
+  .app__content_time li {
+    font-size: 10.5px;
+    letter-spacing: 0.3px;
   }
 }
 
@@ -101,7 +136,7 @@ form {
   top: 20%;
   margin: auto;
   background-color: #393f49;
-  width: 50%;
+  width: 60%;
   height: 50%;
   box-shadow: 0px 10px 10px 0px #393f49;
 }
@@ -135,13 +170,7 @@ form {
   font-weight: lighter;
   cursor: pointer;
 }
-.inputLi {
-  outline: none;
-  border: 1px solid white;
-  cursor: auto;
-  background: transparent;
-  width: 85%;
-}
+
 .disabledLi {
   pointer-events: none;
 }
@@ -179,9 +208,11 @@ form {
 }
 .app__list_empty h1 {
   font-family: "Josefin Sans", sans-serif;
-  color: #e5989b;
+  color: #61dbfb;
   font-size: 28px;
   border-bottom: 1px solid;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .app__options {
   display: flex;
@@ -209,6 +240,29 @@ form {
 
 @media screen and (max-width: 1024px) {
   .app__get_container {
-    width: 70%;
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .app__input input {
+    font-size: 13px;
+  }
+  .app__input input::placeholder {
+    font-size: 13px;
+  }
+  .app__input button {
+    font-size: 12px;
+  }
+  .app__options_tasks_status {
+    width: 40%;
+    font-size: 15px;
+  }
+  .app__lists_li {
+    font-size: 13px;
+  }
+  .app__lists_li_edit,
+  .app__lists_li_del {
+    padding: 6px;
+    font-size: 12px;
   }
 }
