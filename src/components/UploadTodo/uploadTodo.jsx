@@ -217,7 +217,7 @@ const UploadTodo = () => {
                           placeholder="Edit"
                           value={editedText}
                           onChange={(e) => setEditedText(e.target.value)}
-                          className="app__lists_li"
+                          className="app__lists_li app__lists_li_edit_input"
                         />
                         <button
                           className="app__lists_li_edit app__lists_li_save"

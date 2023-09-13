@@ -113,6 +113,9 @@ form {
 }
 
 @media screen and (max-width: 400px) {
+  .app__list_empty h1 {
+    font-size: 22px !important;
+  }
   .app__content_day_date p {
     font-size: 13px;
   }
@@ -170,7 +173,12 @@ form {
   font-weight: lighter;
   cursor: pointer;
 }
-
+.app__lists_li_edit_input {
+  color: black;
+  border: none;
+  outline: none;
+  width: 75%;
+}
 .disabledLi {
   pointer-events: none;
 }
@@ -178,6 +186,8 @@ form {
   margin-top: 8px;
   background-color: green !important;
   color: white;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
 }
 .app__status_completed {
   font-size: 12px;
@@ -264,5 +274,11 @@ form {
   .app__lists_li_del {
     padding: 6px;
     font-size: 12px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .app__options_tasks_status {
+    width: 55%;
+    font-size: 15px;
   }
 }
